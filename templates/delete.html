@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Are you sure you want to delete this booking?</h1>
+        <p>Booking ID: {{ booking[0] }}</p>
+        <p>Name: {{ booking[1] }}</p>
+        <p>Movie Title: {{ booking[3] }}</p>
+        <p>Showtime: {{ booking[4] }}</p>
+        <p>Seats: {{ booking[5] }}</p>
+
+        <form method="POST">
+            <button type="submit">Delete Booking</button>
+        </form>
+
+        <a href="/">Cancel</a>
+    </div>
+</body>
+</html>
